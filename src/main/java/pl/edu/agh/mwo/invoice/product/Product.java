@@ -16,6 +16,9 @@ public abstract class Product {
 	}
 
 	public String getName() {
+		if(this.name.equals("") || this.name.equals(null)){
+			throw new IllegalArgumentException("empty box");
+		}
 		return this.name;
 	}
 
